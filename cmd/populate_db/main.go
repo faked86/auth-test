@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"log"
 	"os"
 
@@ -37,6 +38,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	ext, _ := database.CheckUser(context.Background(), "56c3079c-f1c9-405f-85d7-574dd8c65771")
+	if ext {
+		return
+	}
+
 	err = database.PopulateTable("56c3079c-f1c9-405f-85d7-574dd8c65771", "a@mail.com")
 	if err != nil {
 		log.Fatal(err)
