@@ -48,3 +48,5 @@ SENDER_PASSWORD=
 3. Change environmental variable `SIGNING_KEY` in `docker-compose.yaml` for server
 
 4. Run `docker compose up`
+
+There will be user with id `56c3079c-f1c9-405f-85d7-574dd8c65771` and email `a@mail.com` in DB
